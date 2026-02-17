@@ -5,7 +5,7 @@
         <form class="home-container__form">
             <input type="text" placeholder="Задача" v-model="task">
             <div class="home-container__form-buttons">
-                <button type="button" @click="getTasks">Обновить список</button>
+                <!-- <button type="button" @click="getTasks">Обновить список</button> -->
                 <button type="button" @click="addTask">Добавить</button>
                 <button type="button" @click="deleteTask">Удалить</button>
                 <button type="button" @click="editTask">Редактировать</button>
@@ -92,6 +92,9 @@
                 this.id = task.id
                 this.task = task.title
             }
+        },
+        mounted() {
+            this.getTasks()
         }
 
     }
